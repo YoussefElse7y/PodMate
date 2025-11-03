@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:podcast_player/ui/widgets/placeholder_builder.dart';
 import 'package:podcast_player/ui/widgets/podcast_image.dart';
 import 'package:flutter/material.dart';

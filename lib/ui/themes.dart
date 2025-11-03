@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -42,17 +38,13 @@ ThemeData _buildLightTheme() {
     dialogBackgroundColor: const Color(0xffffffff),
     indicatorColor: Colors.blueAccent,
     hintColor: const Color(0x8a000000),
-    primaryTextTheme: Typography.material2021(platform: TargetPlatform.android).black,
-    textTheme: Typography.material2021(
+    primaryTextTheme: Typography.material2021(
       platform: TargetPlatform.android,
     ).black,
+    textTheme: Typography.material2021(platform: TargetPlatform.android).black,
     primaryIconTheme: IconThemeData(color: Colors.grey[800]),
-    buttonTheme: base.buttonTheme.copyWith(
-      buttonColor: Colors.orange,
-    ),
-    iconTheme: base.iconTheme.copyWith(
-      color: Colors.orange,
-    ),
+    buttonTheme: base.buttonTheme.copyWith(buttonColor: Colors.orange),
+    iconTheme: base.iconTheme.copyWith(color: Colors.orange),
     sliderTheme: const SliderThemeData().copyWith(
       valueIndicatorColor: Colors.orange,
       trackHeight: 2.0,
@@ -62,16 +54,15 @@ ThemeData _buildLightTheme() {
       ),
     ),
     appBarTheme: base.appBarTheme.copyWith(
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        systemOverlayStyle: SystemUiOverlayStyle.light.copyWith(
-          systemNavigationBarIconBrightness: Brightness.dark,
-          systemNavigationBarColor: Colors.white,
-          statusBarIconBrightness: Brightness.dark,
-        )),
-    snackBarTheme: base.snackBarTheme.copyWith(
-      actionTextColor: Colors.white,
+      backgroundColor: Colors.white,
+      foregroundColor: Colors.black,
+      systemOverlayStyle: SystemUiOverlayStyle.light.copyWith(
+        systemNavigationBarIconBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.dark,
+      ),
     ),
+    snackBarTheme: base.snackBarTheme.copyWith(actionTextColor: Colors.white),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(foregroundColor: Colors.grey[800]),
     ),
@@ -112,15 +103,13 @@ ThemeData _buildDarkTheme() {
     dialogBackgroundColor: const Color(0xff222222),
     indicatorColor: Colors.orange,
     hintColor: const Color(0x80ffffff),
-    primaryTextTheme: Typography.material2021(platform: TargetPlatform.android).white,
+    primaryTextTheme: Typography.material2021(
+      platform: TargetPlatform.android,
+    ).white,
     textTheme: Typography.material2021(platform: TargetPlatform.android).white,
     primaryIconTheme: const IconThemeData(color: Colors.white),
-    iconTheme: base.iconTheme.copyWith(
-      color: Colors.white,
-    ),
-    dividerTheme: base.dividerTheme.copyWith(
-      color: const Color(0xff444444),
-    ),
+    iconTheme: base.iconTheme.copyWith(color: Colors.white),
+    dividerTheme: base.dividerTheme.copyWith(color: const Color(0xff444444)),
     sliderTheme: const SliderThemeData().copyWith(
       valueIndicatorColor: Colors.white,
       trackHeight: 2.0,
@@ -130,18 +119,17 @@ ThemeData _buildDarkTheme() {
       ),
     ),
     appBarTheme: base.appBarTheme.copyWith(
-        backgroundColor: const Color(0xff222222),
-        foregroundColor: Colors.white,
-        shadowColor: const Color(0xff222222),
-        elevation: 1.0,
-        systemOverlayStyle: SystemUiOverlayStyle.light.copyWith(
-          systemNavigationBarIconBrightness: Brightness.light,
-          systemNavigationBarColor: const Color(0xff222222),
-          statusBarIconBrightness: Brightness.light,
-        )),
-    snackBarTheme: base.snackBarTheme.copyWith(
-      actionTextColor: Colors.orange,
+      backgroundColor: const Color(0xff222222),
+      foregroundColor: Colors.white,
+      shadowColor: const Color(0xff222222),
+      elevation: 1.0,
+      systemOverlayStyle: SystemUiOverlayStyle.light.copyWith(
+        systemNavigationBarIconBrightness: Brightness.light,
+        systemNavigationBarColor: const Color(0xff222222),
+        statusBarIconBrightness: Brightness.light,
+      ),
     ),
+    snackBarTheme: base.snackBarTheme.copyWith(actionTextColor: Colors.orange),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: const Color(0xffffffff),

@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'dart:async';
 
 import 'package:path/path.dart';
@@ -18,11 +14,7 @@ class DatabaseService {
   int? version = 1;
   DatabaseUpgrade? upgraderCallback;
 
-  DatabaseService(
-    this.databaseName, {
-    this.version,
-    this.upgraderCallback,
-  });
+  DatabaseService(this.databaseName, {this.version, this.upgraderCallback});
 
   Future<Database> get database async {
     if (_databaseCompleter == null) {

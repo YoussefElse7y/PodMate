@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 /// The BLoCs in this application share common states, such as loading, error
 /// or populated.
 ///
@@ -31,9 +27,7 @@ class BlocEmptyState<T> extends BlocState<T> {}
 class BlocErrorState<T> extends BlocState<T> {
   final BlocErrorType error;
 
-  BlocErrorState({
-    this.error = BlocErrorType.unknown,
-  });
+  BlocErrorState({this.error = BlocErrorType.unknown});
 }
 
 class BlocNoInputState<T> extends BlocState<T> {}

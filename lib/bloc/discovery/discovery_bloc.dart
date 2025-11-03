@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:podcast_player/bloc/bloc.dart';
 import 'package:podcast_player/bloc/discovery/discovery_state_event.dart';
 import 'package:podcast_player/services/podcast/podcast_service.dart';

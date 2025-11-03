@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'dart:io';
 
 import 'package:podcast_player/services/settings/mobile_settings_service.dart';
@@ -31,7 +27,7 @@ void main() async {
   certificateAuthorityBytes = await setupCertificateAuthority();
 
   runApp(
-    AnytimePodcastApp(
+    PodMateApp(
       mobileSettingsService: mobileSettingsService,
       certificateAuthorityBytes: certificateAuthorityBytes,
     ),

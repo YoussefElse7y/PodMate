@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 
 /// This class generates a simple 'handle' icon that can be added on widgets such as
@@ -13,11 +9,7 @@ class SliderHandle extends StatelessWidget {
   final GestureTapCallback? onTap;
   final String label;
 
-  const SliderHandle({
-    super.key,
-    this.onTap,
-    this.label = '',
-  });
+  const SliderHandle({super.key, this.onTap, this.label = ''});
 
   @override
   Widget build(BuildContext context) {

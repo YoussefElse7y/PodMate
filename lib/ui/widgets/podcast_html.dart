@@ -1,6 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html_svg/flutter_html_svg.dart';
@@ -26,18 +23,13 @@ class PodcastHtml extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return clipboard
-        ? SelectionArea(
-            child: HtmlRenderer(content: content),
-          )
+        ? SelectionArea(child: HtmlRenderer(content: content))
         : HtmlRenderer(content: content);
   }
 }
 
 class HtmlRenderer extends StatelessWidget {
-  const HtmlRenderer({
-    super.key,
-    required this.content,
-  });
+  const HtmlRenderer({super.key, required this.content});
 
   final String content;
 
@@ -45,26 +37,18 @@ class HtmlRenderer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Html(
       data: content,
-      extensions: const [
-        SvgHtmlExtension(),
-        TableHtmlExtension(),
-      ],
+      extensions: const [SvgHtmlExtension(), TableHtmlExtension()],
       style: {
         'html': Style(
           fontSize: FontSize(16.25),
           lineHeight: LineHeight.percent(110),
         ),
-        'p': Style(
-          margin: Margins.only(
-            top: 0,
-            bottom: 12,
-          ),
-        ),
+        'p': Style(margin: Margins.only(top: 0, bottom: 12)),
       },
-      onLinkTap: (url, _, __) => canLaunchUrl(Uri.parse(url!)).then((value) => launchUrl(
-            Uri.parse(url),
-            mode: LaunchMode.externalApplication,
-          )),
+      onLinkTap: (url, _, __) => canLaunchUrl(Uri.parse(url!)).then(
+        (value) =>
+            launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication),
+      ),
     );
   }
 }

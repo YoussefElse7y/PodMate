@@ -1,8 +1,12 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-enum DownloadState { none, queued, downloading, failed, cancelled, paused, downloaded }
+enum DownloadState {
+  none,
+  queued,
+  downloading,
+  failed,
+  cancelled,
+  paused,
+  downloaded,
+}
 
 /// A Downloadble is an object that holds information about a podcast episode
 /// and its download status.
@@ -91,7 +95,10 @@ class Downloadable {
 
   @override
   bool operator ==(Object other) =>
-      identical(this, other) || other is Downloadable && runtimeType == other.runtimeType && guid == other.guid;
+      identical(this, other) ||
+      other is Downloadable &&
+          runtimeType == other.runtimeType &&
+          guid == other.guid;
 
   @override
   int get hashCode => guid.hashCode;

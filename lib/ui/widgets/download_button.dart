@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -42,12 +38,7 @@ class DownloadButton extends StatelessWidget {
           animateFromLastPercent: true,
           percent: progress,
           center: percent > 0
-              ? Text(
-                  '$percent%',
-                  style: const TextStyle(
-                    fontSize: 12.0,
-                  ),
-                )
+              ? Text('$percent%', style: const TextStyle(fontSize: 12.0))
               : Icon(
                   icon,
                   size: 22.0,

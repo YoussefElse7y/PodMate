@@ -1,6 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
 import 'package:podcast_player/l10n/L.dart';
 import 'package:podcast_player/ui/widgets/search_slide_route.dart';
 import 'package:flutter/material.dart';

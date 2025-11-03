@@ -1,9 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-
-
 /// This class represents a person of interest to the podcast.
 ///
 /// It is primarily intended to identify people like hosts, co-hosts and guests.
@@ -54,7 +48,12 @@ class Person {
           link == other.link;
 
   @override
-  int get hashCode => name.hashCode ^ role.hashCode ^ group.hashCode ^ image.hashCode ^ link.hashCode;
+  int get hashCode =>
+      name.hashCode ^
+      role.hashCode ^
+      group.hashCode ^
+      image.hashCode ^
+      link.hashCode;
 
   @override
   String toString() {

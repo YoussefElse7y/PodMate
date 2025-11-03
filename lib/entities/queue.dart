@@ -1,19 +1,11 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 /// The current persistable queue.
 class Queue {
   List<String> guids = <String>[];
 
-  Queue({
-    required this.guids,
-  });
+  Queue({required this.guids});
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'q': guids,
-    };
+    return <String, dynamic>{'q': guids};
   }
 
   static Queue fromMap(int key, Map<String, dynamic> guids) {
@@ -24,8 +16,6 @@ class Queue {
       result = g.map((dynamic e) => e.toString()).toList();
     }
 
-    return Queue(
-      guids: result,
-    );
+    return Queue(guids: result);
   }
 }

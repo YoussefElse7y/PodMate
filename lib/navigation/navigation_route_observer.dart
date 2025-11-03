@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -14,7 +10,8 @@ import 'package:flutter/widgets.dart';
 class NavigationRouteObserver extends NavigatorObserver {
   final List<Route<dynamic>?> _routeStack = <Route<dynamic>?>[];
 
-  static final NavigationRouteObserver _instance = NavigationRouteObserver._internal();
+  static final NavigationRouteObserver _instance =
+      NavigationRouteObserver._internal();
 
   NavigationRouteObserver._internal();
 

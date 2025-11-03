@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/widgets.dart';
 
 /// Custom [Decoration] for the chapters, episode & notes tab selector
@@ -37,13 +33,14 @@ class _DotDecorationPainter extends BoxPainter {
     paint.style = PaintingStyle.fill;
 
     canvas.drawRRect(
-        RRect.fromLTRBR(
-          newOffset.dx - pillWidth,
-          newOffset.dy - pillHeight,
-          newOffset.dx + pillWidth,
-          newOffset.dy + pillHeight,
-          const Radius.circular(12.0),
-        ),
-        paint);
+      RRect.fromLTRBR(
+        newOffset.dx - pillWidth,
+        newOffset.dy - pillHeight,
+        newOffset.dx + pillWidth,
+        newOffset.dy + pillHeight,
+        const Radius.circular(12.0),
+      ),
+      paint,
+    );
   }
 }

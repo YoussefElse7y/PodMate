@@ -1,7 +1,3 @@
-// Copyright 2020 Ben Hills and the project contributors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'dart:async';
 
 import 'package:podcast_player/api/podcast/mobile_podcast_api.dart';
@@ -61,7 +57,7 @@ var theme = Themes.lightTheme().themeData;
 /// Anytime is a Podcast player. You can search and subscribe to podcasts,
 /// download and stream episodes and view the latest podcast charts.
 // ignore: must_be_immutable
-class AnytimePodcastApp extends StatefulWidget {
+class PodMateApp extends StatefulWidget {
   final Repository repository;
   late PodcastApi podcastApi;
   late DownloadService downloadService;
@@ -72,7 +68,7 @@ class AnytimePodcastApp extends StatefulWidget {
   MobileSettingsService mobileSettingsService;
   List<int> certificateAuthorityBytes;
 
-  AnytimePodcastApp({
+  PodMateApp({
     super.key,
     required this.mobileSettingsService,
     required this.certificateAuthorityBytes,
@@ -110,10 +106,10 @@ class AnytimePodcastApp extends StatefulWidget {
   }
 
   @override
-  AnytimePodcastAppState createState() => AnytimePodcastAppState();
+  PodMateAppState createState() => PodMateAppState();
 }
 
-class AnytimePodcastAppState extends State<AnytimePodcastApp> {
+class PodMateAppState extends State<PodMateApp> {
   ThemeData? theme;
 
   @override
