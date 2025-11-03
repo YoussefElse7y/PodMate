@@ -1,7 +1,11 @@
-## Anytime Podcast Player
+## 🎧 PodMate — your friendly podcast companion.
 
-This is the official repository for Anytime Podcast Player - the simple and easy to use Podcast playing 
-app for Android & iOS, built with Dart & Flutter.
+
+**PodMate** is a modern mobile application designed for podcast lovers.  
+It lets you **discover, stream, and organize** podcasts from around the world — all in one intuitive interface.
+
+Whether you’re into tech talk, storytelling, or daily news, PodMate helps you stay connected to your favorite voices with a **clean UI, powerful search, and smart playback features**.
+
 ***
 Latest build status
 
