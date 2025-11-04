@@ -59,7 +59,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "uk.me.amugofjava.anytime"
+        applicationId "com.youssefelse7y.podmate"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
@@ -89,7 +89,7 @@ android {
         }
     }
 
-    namespace 'uk.me.amugofjava.anytime'
+    namespace 'com.youssefelse7y.podmate'
 
     lint {
         abortOnError false

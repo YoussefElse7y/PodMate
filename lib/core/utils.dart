@@ -70,7 +70,7 @@ Future<String> getStorageDirectory() async {
     directory = await getApplicationSupportDirectory();
   }
 
-  return join(directory.path, 'AnyTime');
+  return join(directory.path, 'PodMate');
 }
 
 Future<bool> hasExternalStorage() async {

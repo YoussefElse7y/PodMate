@@ -1,4 +1,4 @@
-package uk.me.amugofjava.anytime_podcast_player
+package com.youssefelse7y.podmate_podcast_player
 
 import io.flutter.embedding.android.FlutterActivity
 

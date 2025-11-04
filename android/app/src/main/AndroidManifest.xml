@@ -5,7 +5,7 @@
   -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        package="uk.me.amugofjava.anytime">
+        package="com.youssefelse7y.podmate">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -41,7 +41,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:pathPrefix="/subscribe" />
-                <data android:scheme="anytime-subscribe" />
+                <data android:scheme="podmate-subscribe" />
             </intent-filter>
 
             <intent-filter android:autoVerify="true">
@@ -50,7 +50,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:host="anytimeplayer.app" />
+                <data android:host="podmate.app" />
                 <data android:pathPrefix="/subscribe" />
                 <data android:scheme="https" />
                 <data android:scheme="http" />

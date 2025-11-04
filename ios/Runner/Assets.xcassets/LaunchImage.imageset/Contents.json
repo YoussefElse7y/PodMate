@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "anytime-logo-s.png",
+      "filename" : "PodMate-logo-s.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "anytime-logo-s 1.png",
+      "filename" : "PodMate-logo-s 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "anytime-logo-s 2.png",
+      "filename" : "PodMate-logo-s 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

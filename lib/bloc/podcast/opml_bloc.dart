@@ -7,7 +7,6 @@ import 'package:rxdart/rxdart.dart';
 /// OPML (Outline Processor Markup Language) is an XML format for outlines, which is used in Podcast
 /// apps for transferring podcast subscriptions/follows from/to other podcast apps.
 ///
-/// Anytime supports both import and export of OPML.
 class OPMLBloc extends Bloc {
   final log = Logger('OPMLBloc');
 

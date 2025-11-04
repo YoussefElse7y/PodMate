@@ -1,4 +1,4 @@
-/// Anytime can support multiple search providers.
+/// PodMate can support multiple search providers.
 ///
 /// This class represents a provider.
 class SearchProvider {

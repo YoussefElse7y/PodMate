@@ -212,6 +212,7 @@ class PodMateAppState extends State<PodMateApp> {
         ],
         supportedLocales: const [
           Locale('en', ''),
+          Locale('ar', ''),
           Locale('es', ''),
           Locale('de', ''),
           Locale('gl', ''),
@@ -223,27 +224,27 @@ class PodMateAppState extends State<PodMateApp> {
         theme: theme,
         // Uncomment builder below to enable accessibility checker tool.
         // builder: (context, child) => AccessibilityTools(child: child),
-        home: const AnytimeHomePage(title: 'Anytime Podcast Player'),
+        home: const PodMateHomePage(title: 'PodMate'),
       ),
     );
   }
 }
 
-class AnytimeHomePage extends StatefulWidget {
+class PodMateHomePage extends StatefulWidget {
   final String? title;
   final bool topBarVisible;
 
-  const AnytimeHomePage({super.key, this.title, this.topBarVisible = true});
+  const PodMateHomePage({super.key, this.title, this.topBarVisible = true});
 
   @override
-  State<AnytimeHomePage> createState() => _AnytimeHomePageState();
+  State<PodMateHomePage> createState() => _PodMateHomePageState();
 }
 
-class _AnytimeHomePageState extends State<AnytimeHomePage>
+class _PodMateHomePageState extends State<PodMateHomePage>
     with WidgetsBindingObserver {
   StreamSubscription<Uri>? deepLinkSubscription;
 
-  final log = Logger('_AnytimeHomePageState');
+  final log = Logger('_PodMateHomePageState');
   bool handledInitialLink = false;
   Widget? library;
 

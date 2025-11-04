@@ -1,0 +1,1276 @@
+{
+  "@@last_modified": "2020-02-20T12:15:52.645497",
+  "app_title": "PodMate مشغل البودكاست",
+  "@app_title": {
+    "description": "Full title for the application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "app_title_short": "PodMate",
+  "@app_title_short": {
+    "description": "Title for the application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "library": "المكتبة",
+  "@library": {
+    "description": "Library tab label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "discover": "استكشف",
+  "@discover": {
+    "description": "Discover tab label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "downloads": "التنزيلات",
+  "@downloads": {
+    "description": "Downloads tab label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "subscribe_button_label": "متابعة",
+  "@subscribe_button_label": {
+    "description": "Subscribe button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "unsubscribe_button_label": "إلغاء المتابعة",
+  "@unsubscribe_button_label": {
+    "description": "Unsubscribe button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel_button_label": "إلغاء",
+  "@cancel_button_label": {
+    "description": "Cancel button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ok_button_label": "موافق",
+  "@ok_button_label": {
+    "description": "OK button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "subscribe_label": "متابعة",
+  "@subscribe_label": {
+    "description": "Subscribe label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "unsubscribe_label": "إلغاء المتابعة",
+  "@unsubscribe_label": {
+    "description": "Unsubscribe label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "unsubscribe_message": "إلغاء المتابعة سيحذف جميع الحلقات المحملة من هذا البودكاست.",
+  "@unsubscribe_message": {
+    "description": "Displayed when the user unsubscribes from a podcast.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "search_for_podcasts_hint": "ابحث عن بودكاست",
+  "@search_for_podcasts_hint": {
+    "description": "Hint displayed on search bar when the user clicks the search icon.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "no_subscriptions_message": "اضغط على زر الاستكشاف أدناه أو استخدم شريط البحث أعلاه للعثور على أول بودكاست لك",
+  "@no_subscriptions_message": {
+    "description": "Displayed on the library tab when the user has no subscriptions",
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete_label": "حذف",
+  "@delete_label": {
+    "description": "Delete label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete_button_label": "حذف",
+  "@delete_button_label": {
+    "description": "Delete label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mark_played_label": "وضع علامة كمشغل",
+  "@mark_played_label": {
+    "description": "Mark as played",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mark_unplayed_label": "وضع علامة كغير مشغل",
+  "@mark_unplayed_label": {
+    "description": "Mark as unplayed",
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete_episode_confirmation": "هل أنت متأكد أنك تريد حذف هذه الحلقة؟",
+  "@delete_episode_confirmation": {
+    "description": "User is asked to confirm when they attempt to delete an episode",
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete_episode_title": "حذف الحلقة",
+  "@delete_episode_title": {
+    "description": "Delete label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "no_downloads_message": "ليس لديك أي حلقات محملة",
+  "@no_downloads_message": {
+    "description": "Displayed on the library tab when the user has no subscriptions",
+    "type": "text",
+    "placeholders": {}
+  },
+  "no_search_results_message": "لم يتم العثور على بودكاست",
+  "@no_search_results_message": {
+    "description": "Displayed on the library tab when the user has no subscriptions",
+    "type": "text",
+    "placeholders": {}
+  },
+  "no_podcast_details_message": "تعذر تحميل حلقات البودكاست. يرجى التحقق من اتصالك.",
+  "@no_podcast_details_message": {
+    "description": "Displayed on the podcast details page when the details could not be loaded",
+    "type": "text",
+    "placeholders": {}
+  },
+  "play_button_label": "تشغيل الحلقة",
+  "@play_button_label": {
+    "description": "Semantic label for the play button",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pause_button_label": "إيقاف الحلقة مؤقتاً",
+  "@pause_button_label": {
+    "description": "Semantic label for the pause button",
+    "type": "text",
+    "placeholders": {}
+  },
+  "download_episode_button_label": "تحميل الحلقة",
+  "@download_episode_button_label": {
+    "description": "Semantic label for the download episode button",
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete_episode_button_label": "حذف الحلقة المحملة",
+  "@delete_episode_button_label": {
+    "description": "Semantic label for the delete episode",
+    "type": "text",
+    "placeholders": {}
+  },
+  "close_button_label": "إغلاق",
+  "@close_button_label": {
+    "description": "Close button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "search_button_label": "بحث",
+  "@search_button_label": {
+    "description": "Search button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "clear_search_button_label": "مسح نص البحث",
+  "@clear_search_button_label": {
+    "description": "Search button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "search_back_button_label": "رجوع",
+  "@search_back_button_label": {
+    "description": "Search button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "minimise_player_window_button_label": "تصغير نافذة المشغل",
+  "@minimise_player_window_button_label": {
+    "description": "Search button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "rewind_button_label": "إرجاع الحلقة 10 ثوانٍ",
+  "@rewind_button_label": {
+    "description": "Rewind button tooltip",
+    "type": "text",
+    "placeholders": {}
+  },
+  "fast_forward_button_label": "تقديم الحلقة 30 ثانية",
+  "@fast_forward_button_label": {
+    "description": "Fast forward tooltip",
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_label": "حول",
+  "@about_label": {
+    "description": "About menu item",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mark_episodes_played_label": "وضع علامة على جميع الحلقات كمشغلة",
+  "@mark_episodes_played_label": {
+    "description": "Mark all episodes played menu item",
+    "type": "text",
+    "placeholders": {}
+  },
+  "mark_episodes_not_played_label": "وضع علامة على جميع الحلقات كغير مشغلة",
+  "@mark_episodes_not_played_label": {
+    "description": "Mark all episodes not-played menu item",
+    "type": "text",
+    "placeholders": {}
+  },
+  "stop_download_confirmation": "هل أنت متأكد أنك تريد إيقاف هذا التنزيل وحذف الحلقة؟",
+  "@stop_download_confirmation": {
+    "description": "User is asked to confirm when they wish to stop the active download.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "stop_download_button_label": "إيقاف",
+  "@stop_download_button_label": {
+    "description": "Stop label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "stop_download_title": "إيقاف التنزيل",
+  "@stop_download_title": {
+    "description": "Stop download label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_mark_deleted_played_label": "وضع علامة على الحلقات المحذوفة كمشغلة",
+  "@settings_mark_deleted_played_label": {
+    "description": "Mark deleted episodes as played setting",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_delete_played_label": "حذف الحلقات المحملة بعد تشغيلها",
+  "@settings_delete_played_label": {
+    "description": "Delete downloaded episodes once played setting",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_download_sd_card_label": "تحميل الحلقات على بطاقة SD",
+  "@settings_download_sd_card_label": {
+    "description": "Download episodes to SD card setting",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_download_switch_card": "سيتم حفظ التنزيلات الجديدة على بطاقة SD. ستبقى التنزيلات الحالية على التخزين الداخلي.",
+  "@settings_download_switch_card": {
+    "description": "Displayed when user switches from internal storage to SD card",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_download_switch_internal": "سيتم حفظ التنزيلات الجديدة على التخزين الداخلي. ستبقى التنزيلات الحالية على بطاقة SD.",
+  "@settings_download_switch_internal": {
+    "description": "Displayed when user switches from internal SD card to internal storage",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_download_switch_label": "تغيير موقع التخزين",
+  "@settings_download_switch_label": {
+    "description": "Dialog label for storage switch",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel_option_label": "إلغاء",
+  "@cancel_option_label": {
+    "description": "Cancel option label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_theme": "المظهر",
+  "@settings_theme": {
+    "description": "Display theme",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_theme_heading": "اختر المظهر",
+  "@settings_theme_heading": {
+    "description": "Choose theme behaviour",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_theme_value_auto": "مظهر النظام",
+  "@settings_theme_value_auto": {
+    "description": "Based on System theme",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_theme_value_light": "المظهر الفاتح",
+  "@settings_theme_value_light": {
+    "description": "Light theme",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_theme_value_dark": "المظهر الداكن",
+  "@settings_theme_value_dark": {
+    "description": "Dark theme",
+    "type": "text",
+    "placeholders": {}
+  },
+  "playback_speed_label": "سرعة التشغيل",
+  "@playback_speed_label": {
+    "description": "Set playback speed icon label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "show_notes_label": "ملاحظات العرض",
+  "@show_notes_label": {
+    "description": "Set show notes icon label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "search_provider_label": "مزود البحث",
+  "@search_provider_label": {
+    "description": "Set search provider label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_label": "الإعدادات",
+  "@settings_label": {
+    "description": "Settings label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "go_back_button_label": "رجوع",
+  "@go_back_button_label": {
+    "description": "Go-back button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "continue_button_label": "متابعة",
+  "@continue_button_label": {
+    "description": "Continue button label",
+    "type": "text",
+    "placeholders": {}
+  },
+  "consent_message": "سينقلك رابط التمويل هذا إلى موقع خارجي حيث يمكنك دعم البرنامج مباشرة. الروابط مقدمة من مؤلفي البودكاست وليست مراقبة من قبل Anytime.",
+  "@consent_message": {
+    "description": "Display when first accessing external funding link",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_label": "الحلقة",
+  "@episode_label": {
+    "description": "Tab label on now playing screen.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "chapters_label": "الفصول",
+  "@chapters_label": {
+    "description": "Tab label on now playing screen.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "notes_label": "الملاحظات",
+  "@notes_label": {
+    "description": "Tab label on now playing screen.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "podcast_funding_dialog_header": "تمويل البودكاست",
+  "@podcast_funding_dialog_header": {
+    "description": "Header on podcast funding consent dialog",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_open_now_playing": "وضع المشغل بملء الشاشة عند بدء الحلقة",
+  "@settings_auto_open_now_playing": {
+    "description": "Displayed when user switches to use full screen player automatically",
+    "type": "text",
+    "placeholders": {}
+  },
+  "error_no_connection": "تعذر تشغيل الحلقة. يرجى التحقق من اتصالك والمحاولة مرة أخرى.",
+  "@error_no_connection": {
+    "description": "Displayed when attempting to start streaming an episode with no data connection",
+    "type": "text",
+    "placeholders": {}
+  },
+  "error_playback_fail": "حدث خطأ غير متوقع أثناء التشغيل. يرجى التحقق من اتصالك والمحاولة مرة أخرى.",
+  "@error_playback_fail": {
+    "description": "Displayed when attempting to start streaming an episode with no data connection",
+    "type": "text",
+    "placeholders": {}
+  },
+  "add_rss_feed_option": "إضافة موجز RSS",
+  "@add_rss_feed_option": {
+    "description": "Option label for adding manual RSS feed url",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_import_opml": "استيراد OPML",
+  "@settings_import_opml": {
+    "description": "Option label importing OPML file",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_export_opml": "تصدير OPML",
+  "@settings_export_opml": {
+    "description": "Option label exporting OPML file",
+    "type": "text",
+    "placeholders": {}
+  },
+  "label_opml_importing": "جارٍ الاستيراد",
+  "@label_opml_importing": {
+    "description": "Label for importing OPML dialog",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_heading": "تحديث الحلقات في شاشة التفاصيل بعد",
+  "@settings_auto_update_episodes_heading": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes": "تحديث الحلقات تلقائياً",
+  "@settings_auto_update_episodes": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_never": "أبداً",
+  "@settings_auto_update_episodes_never": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_always": "دائماً",
+  "@settings_auto_update_episodes_always": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_10min": "10 دقائق منذ آخر تحديث",
+  "@settings_auto_update_episodes_10min": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_30min": "30 دقيقة منذ آخر تحديث",
+  "@settings_auto_update_episodes_30min": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_1hour": "ساعة واحدة منذ آخر تحديث",
+  "@settings_auto_update_episodes_1hour": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_3hour": "3 ساعات منذ آخر تحديث",
+  "@settings_auto_update_episodes_3hour": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_6hour": "6 ساعات منذ آخر تحديث",
+  "@settings_auto_update_episodes_6hour": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_auto_update_episodes_12hour": "12 ساعة منذ آخر تحديث",
+  "@settings_auto_update_episodes_12hour": {
+    "description": "Option label for auto updating of episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "new_episodes_label": "حلقات جديدة متاحة",
+  "@new_episodes_label": {
+    "description": "Option label for new episodes snackbar",
+    "type": "text",
+    "placeholders": {}
+  },
+  "new_episodes_view_now_label": "عرض الآن",
+  "@new_episodes_view_now_label": {
+    "description": "Option action label for new episodes snackbar",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_personalisation_divider_label": "التخصيص",
+  "@settings_personalisation_divider_label": {
+    "description": "Settings divider label for personalisation",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_episodes_divider_label": "الحلقات",
+  "@settings_episodes_divider_label": {
+    "description": "Settings divider label for episodes",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_playback_divider_label": "التشغيل",
+  "@settings_playback_divider_label": {
+    "description": "Settings divider label for playback",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_data_divider_label": "البيانات",
+  "@settings_data_divider_label": {
+    "description": "Settings divider label for data",
+    "type": "text",
+    "placeholders": {}
+  },
+  "audio_effect_trim_silence_label": "قص الصمت",
+  "@audio_effect_trim_silence_label": {
+    "description": "Label for trim silence toggle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "audio_effect_volume_boost_label": "تعزيز الصوت",
+  "@audio_effect_volume_boost_label": {
+    "description": "Label for volume boost toggle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "audio_settings_playback_speed_label": "سرعة التشغيل",
+  "@audio_settings_playback_speed_label": {
+    "description": "Label for playback settings widget",
+    "type": "text",
+    "placeholders": {}
+  },
+  "empty_queue_message": "قائمة الانتظار فارغة",
+  "@empty_queue_message": {
+    "description": "Displayed when there are no items left in the queue",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "clear_queue_button_label": "مسح قائمة الانتظار",
+  "@clear_queue_button_label": {
+    "description": "Clear queue button label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "now_playing_queue_label": "قيد التشغيل الآن",
+  "@now_playing_queue_label": {
+    "description": "Now playing label on queue",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "up_next_queue_label": "التالي",
+  "@up_next_queue_label": {
+    "description": "Up next label on queue",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "more_label": "المزيد",
+  "@more_label": {
+    "description": "More label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "queue_add_label": "إضافة",
+  "@queue_add_label": {
+    "description": "Queue add label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "queue_remove_label": "إزالة",
+  "@queue_remove_label": {
+    "description": "Queue remove label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "opml_import_button_label": "استيراد",
+  "@opml_import_button_label": {
+    "description": "OPML Import button label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "opml_export_button_label": "تصدير",
+  "@opml_export_button_label": {
+    "description": "OPML Export button label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "opml_import_export_label": "استيراد/تصدير OPML",
+  "@opml_import_export_label": {
+    "description": "OPML Import/Export label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "queue_clear_label": "هل أنت متأكد أنك تريد مسح قائمة الانتظار؟",
+  "@queue_clear_label": {
+    "description": "Shown on dialog box when clearing queue",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "queue_clear_button_label": "مسح",
+  "@queue_clear_button_label": {
+    "description": "Shown on dialog box when clearing queue",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "queue_clear_label_title": "مسح قائمة الانتظار",
+  "@queue_clear_label_title": {
+    "description": "Shown on dialog box when clearing queue",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "layout_label": "التخطيط",
+  "@layout_label": {
+    "description": "Layout menu label",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "discovery_categories_itunes": "الكل,الفنون,الأعمال,الكوميديا,التعليم,الخيال,الحكومة,الصحة واللياقة,التاريخ,الأطفال والعائلة,الترفيه,الموسيقى,الأخبار,الدين والروحانية,العلوم,المجتمع والثقافة,الرياضة,التلفزيون والأفلام,التكنولوجيا,الجريمة الحقيقية",
+  "@discovery_categories_itunes": {
+    "description": "Comma separated list of iTunes categories",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+ 
+  "discovery_categories_pindex": "الكل,برامج ما بعد العرض,بديل,حيوانات,رسوم متحركة,فنون,علم الفلك,سيارات,طيران,بيسبول,كرة السلة,جمال,كتب,بوذية,أعمال,وظائف,كيمياء,مسيحية,مناخ,كوميديا,تعليق,دورات,حرف يدوية,كريكيت,عملات رقمية,ثقافة,يومي,تصميم,وثائقي,دراما,أرض,تعليم,ترفيه,ريادة أعمال,عائلة,خيال,موضة,خيال أدبي,سينما,لياقة بدنية,طعام,كرة قدم أمريكية,ألعاب,حديقة,جولف,حكومة,صحة,هندوسية,تاريخ,هوايات,هوكي,منزل,إرشادات,ارتجال,مقابلات,استثمار,إسلام,مجلات,يهودية,أطفال,لغة,تعلم,ترفيه,حياة,إدارة,مانجا,تسويق,رياضيات,طب,صحة نفسية,موسيقى,طبيعي,طبيعة,أخبار,غير ربحي,تغذية,تربية,فنون أداء,شخصي,حيوانات أليفة,فلسفة,فيزياء,أماكن,سياسة,علاقات,دين,مراجعات,لعب أدوار,رجبي,جري,علوم,تطوير الذات,جنسانية,كرة قدم,اجتماعي,مجتمع,روحانيات,رياضة,كوميديا ارتجالية,قصص,سباحة,تلفزيون,ألعاب طاولة,تقنية,تنس,سفر,جرائم حقيقية,ألعاب فيديو,بصري,كرة طائرة,طقس,برية,مصارعة",
+  "@discovery_categories_pindex": {
+    "description": "قائمة مفصولة بفواصل لفئات فهرس البودكاست",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "transcript_label": "النص المكتوب",
+  "@transcript_label": {
+    "description": "تسمية النص المكتوب",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "no_transcript_available_label": "النص المكتوب غير متوفر لهذا البودكاست",
+  "@no_transcript_available_label": {
+    "description": "يُعرض في عرض النص المكتوب عندما لا يكون النص متوفراً",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "search_transcript_label": "البحث في النص المكتوب",
+  "@search_transcript_label": {
+    "description": "نص تلميح لمربع البحث في النص المكتوب",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "auto_scroll_transcript_label": "متابعة النص المكتوب",
+  "@auto_scroll_transcript_label": {
+    "description": "تسمية مفتاح التمرير التلقائي",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "transcript_why_not_label": "لماذا لا؟",
+  "@transcript_why_not_label": {
+    "description": "رابط لسبب عدم توفر النص المكتوب",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "transcript_why_not_url": "https://anytimeplayer.app/docs/anytime_transcript_support_ar.html",
+  "@transcript_why_not_url": {
+    "description": "رابط خاص باللغة",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_podcast_details_header": "صفحة تفاصيل البودكاست والحلقات",
+  "@semantics_podcast_details_header": {
+    "description": "يصف صفحة تفاصيل البودكاست",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_layout_option_list": "تخطيط القائمة",
+  "@semantics_layout_option_list": {
+    "description": "يصف زر تخطيط القائمة",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_layout_option_compact_grid": "تخطيط الشبكة المضغوط",
+  "@semantics_layout_option_compact_grid": {
+    "description": "يصف زر تخطيط الشبكة المضغوط",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_layout_option_grid": "تخطيط الشبكة",
+  "@semantics_layout_option_grid": {
+    "description": "يصف زر تخطيط الشبكة",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_mini_player_header": "المشغل المصغر. اسحب لليمين لزر التشغيل/الإيقاف. انقر للفتح نافذة المشغل الرئيسية",
+  "@semantics_mini_player_header": {
+    "description": "يصف المشغل المصغر",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_main_player_header": "نافذة المشغل الرئيسية",
+  "@semantics_main_player_header": {
+    "description": "يصف المشغل الرئيسي",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_play_pause_toggle": "زر التشغيل/الإيقاف",
+  "@semantics_play_pause_toggle": {
+    "description": "يصف زر التبديل بين التشغيل والإيقاف",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_decrease_playback_speed": "تقليل سرعة التشغيل",
+  "@semantics_decrease_playback_speed": {
+    "description": "يصف عنصر التحكم في ضبط السرعة",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_increase_playback_speed": "زيادة سرعة التشغيل",
+  "@semantics_increase_playback_speed": {
+    "description": "يصف عنصر التحكم في ضبط السرعة",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_expand_podcast_description": "توسيع وصف البودكاست",
+  "@semantics_expand_podcast_description": {
+    "description": "يصف زر طي/توسيع البودكاست",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_collapse_podcast_description": "طي وصف البودكاست",
+  "@semantics_collapse_podcast_description": {
+    "description": "يصف زر طي/توسيع البودكاست",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_add_to_queue": "إضافة الحلقة إلى قائمة الانتظار",
+  "@semantics_add_to_queue": {
+    "description": "يصف زر الإضافة إلى قائمة الانتظار",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_remove_from_queue": "إزالة الحلقة من قائمة الانتظار",
+  "@semantics_remove_from_queue": {
+    "description": "يصف زر الإضافة إلى قائمة الانتظار",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_mark_episode_played": "وضع علامة مُشاهد على الحلقة",
+  "@semantics_mark_episode_played": {
+    "description": "يصف زر وضع علامة مُشاهد",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_mark_episode_unplayed": "وضع علامة غير مُشاهد على الحلقة",
+  "@semantics_mark_episode_unplayed": {
+    "description": "يصف زر وضع علامة غير مُشاهد",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_episode_tile_collapsed": "عنصر قائمة الحلقة. يعرض الصورة والملخص والتحكم الرئيسي.",
+  "@semantics_episode_tile_collapsed": {
+    "description": "يصف خيارات بلاطة الحلقة عند الطي",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_episode_tile_expanded": "عنصر قائمة الحلقة. يعرض الوصف والتحكم الرئيسي والتحكم الإضافي.",
+  "@semantics_episode_tile_expanded": {
+    "description": "يصف خيارات بلاطة الحلقة عند التوسيع",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_episode_tile_collapsed_hint": "التوسيع وإظهار المزيد من التفاصيل والخيارات الإضافية",
+  "@semantics_episode_tile_collapsed_hint": {
+    "description": "يصف خيارات بلاطة الحلقة عند الطي",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantics_episode_tile_expanded_hint": "الطي وإظهار الملخص والتنزيل وعنصر التحكم في التشغيل",
+  "@semantics_episode_tile_expanded_hint": {
+    "description": "يصف خيارات بلاطة الحلقة عند التوسيع",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "sleep_off_label": "إيقاف",
+  "@sleep_off_label": {
+    "description": "يصف تسمية إيقاف السكون",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "sleep_episode_label": "نهاية الحلقة",
+  "@sleep_episode_label": {
+    "description": "يصف تسمية سكون نهاية الحلقة",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "sleep_minute_label": "{minutes} دقيقة",
+  "@sleep_minute_label": {
+    "description": "يصف عدد الدقائق للسكون",
+    "type": "text",
+    "placeholders_order": [
+      "minutes"
+    ],
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "sleep_timer_label": "مؤقت السكون",
+  "@sleep_timer_label": {
+    "description": "يصف تسمية مؤقت السكون",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "feedback_menu_item_label": "ملاحظات",
+  "@feedback_menu_item_label": {
+    "description": "خيار الملاحظات في القائمة الرئيسية",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "podcast_options_overflow_menu_semantic_label": "قائمة الخيارات",
+  "@podcast_options_overflow_menu_semantic_label": {
+    "description": "قائمة فائض تفاصيل البودكاست",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantic_announce_searching": "جارٍ البحث، يرجى الانتظار.",
+  "@semantic_announce_searching": {
+    "description": "يُنطق عند البحث قيد التقدم.",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantic_playing_options_expand_label": "فتح منزلق خيارات التشغيل",
+  "@semantic_playing_options_expand_label": {
+    "description": "يوضع على مقبض الخيارات عند تمكين قارئ الشاشة.",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantic_playing_options_collapse_label": "إغلاق منزلق خيارات التشغيل",
+  "@semantic_playing_options_collapse_label": {
+    "description": "يوضع على مقبض الخيارات عند تمكين قارئ الشاشة.",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantic_podcast_artwork_label": "صورة البودكاست",
+  "@semantic_podcast_artwork_label": {
+    "description": "يوضع حول صورة البودكاست على المشغل الرئيسي",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantic_chapter_link_label": "رابط ويب الفصل",
+  "@semantic_chapter_link_label": {
+    "description": "يوضع حول رابط الفصل",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "semantic_current_chapter_label": "الفصل الحالي",
+  "@semantic_current_chapter_label": {
+    "description": "يوضع حول الفصل",
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "episode_filter_none_label": "بدون",
+  "@episode_filter_none_label": {
+    "description": "الحلقات غير مفلترة",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_filter_started_label": "بدأت",
+  "@episode_filter_started_label": {
+    "description": "إظهار الحلقات التي بدأت فقط",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_filter_played_label": "مُشاهدة",
+  "@episode_filter_played_label": {
+    "description": "إظهار الحلقات المشاهدة فقط",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_filter_unplayed_label": "غير مُشاهدة",
+  "@episode_filter_unplayed_label": {
+    "description": "إظهار الحلقات غير المشاهدة فقط",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_filter_no_episodes_title_label": "لم يتم العثور على حلقات",
+  "@episode_filter_no_episodes_title_label": {
+    "description": "عنوان عدم وجود حلقات",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_filter_no_episodes_title_description": "هذا البودكاست ليس لديه حلقات تطابق معايير البحث والفلتر الخاصة بك",
+  "@episode_filter_no_episodes_title_description": {
+    "description": "وصف عدم العثور على حلقات",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_filter_clear_filters_button_label": "مسح الفلاتر",
+  "@episode_filter_clear_filters_button_label": {
+    "description": "زر مسح الفلاتر",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_filter_semantic_label": "تصفية الحلقات",
+  "@episode_filter_semantic_label": {
+    "description": "تسمية دلالية لتصفية الحلقات",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_sort_semantic_label": "ترتيب الحلقات",
+  "@episode_sort_semantic_label": {
+    "description": "تسمية دلالية لترتيب الحلقات",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_sort_none_label": "افتراضي",
+  "@episode_sort_none_label": {
+    "description": "ترتيب الحلقات الافتراضي",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_sort_latest_first_label": "الأحدث أولاً",
+  "@episode_sort_latest_first_label": {
+    "description": "ترتيب الحلقات الأحدث أولاً",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_sort_earliest_first_label": "الأقدم أولاً",
+  "@episode_sort_earliest_first_label": {
+    "description": "ترتيب الحلقات الأقدم أولاً",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_sort_alphabetical_ascending_label": "أبجدي أ-ي",
+  "@episode_sort_alphabetical_ascending_label": {
+    "description": "ترتيب الحلقات أبجدياً تصاعدياً",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_sort_alphabetical_descending_label": "أبجدي ي-أ",
+  "@episode_sort_alphabetical_descending_label": {
+    "description": "ترتيب الحلقات أبجدياً تنازلياً",
+    "type": "text",
+    "placeholders": {}
+  },
+  "open_show_website_label": "فتح موقع العرض",
+  "@open_show_website_label": {
+    "description": "فتح موقع العرض في المتصفح",
+    "type": "text",
+    "placeholders": {}
+  },
+  "refresh_feed_label": "تحديث الحلقات",
+  "@refresh_feed_label": {
+    "description": "عنصر القائمة لتحديث الحلقات",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrim_layout_selector": "إغلاق محدد التخطيط",
+  "@scrim_layout_selector": {
+    "description": "يستبدل تسمية القناع الافتراضية للورقة السفلية لمحدد التخطيط.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "now_playing_episode_position": "موضع الحلقة",
+  "@now_playing_episode_position": {
+    "description": "تسمية عنصر التحكم في منزلق موضع الحلقة",
+    "type": "text",
+    "placeholders": {}
+  },
+  "now_playing_episode_time_remaining": "الوقت المتبقي",
+  "@now_playing_episode_time_remaining": {
+    "description": "تسمية عنصر التحكم في منزلق الوقت المتبقي للحلقة",
+    "type": "text",
+    "placeholders": {}
+  },
+  "resume_button_label": "استئناف الحلقة",
+  "@resume_button_label": {
+    "description": "تسمية دلالية لزر الاستئناف",
+    "type": "text",
+    "placeholders": {}
+  },
+  "play_download_button_label": "تشغيل الحلقة المحملة",
+  "@play_download_button_label": {
+    "description": "تسمية دلالية لزر تشغيل الحلقة المحملة",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel_download_button_label": "إلغاء التحميل",
+  "@cancel_download_button_label": {
+    "description": "تسمية دلالية لزر إلغاء التحميل",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_details_button_label": "عرض معلومات الحلقة",
+  "@episode_details_button_label": {
+    "description": "تسمية دلالية لزر عرض المعلومات.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrim_sleep_timer_selector": "إغلاق محدد مؤقت السكون",
+  "@scrim_sleep_timer_selector": {
+    "description": "يستبدل تسمية القناع الافتراضية للمخصص.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrim_speed_selector": "إغلاق محدد سرعة التشغيل",
+  "@scrim_speed_selector": {
+    "description": "يستبدل تسمية القناع الافتراضية للمخصص.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "semantic_current_value_label": "القيمة الحالية",
+  "@semantic_current_value_label": {
+    "description": "لإعداد السكون الحالي",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrim_episode_details_selector": "إغلاق تفاصيل الحلقة",
+  "@scrim_episode_details_selector": {
+    "description": "يستبدل تسمية القناع الافتراضية للورقة السفلية لتفاصيل الحلقة.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrim_episode_sort_selector": "إغلاق ترتيب الحلقة",
+  "@scrim_episode_sort_selector": {
+    "description": "يستبدل تسمية القناع الافتراضية للورقة السفلية لترتيب الحلقة.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrim_episode_filter_selector": "إغلاق تصفية الحلقة",
+  "@scrim_episode_filter_selector": {
+    "description": "يستبدل تسمية القناع الافتراضية للورقة السفلية لتصفية الحلقة.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "search_episodes_label": "البحث في الحلقات",
+  "@search_episodes_label": {
+    "description": "نص تلميح لمربع البحث في الحلقات",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_continuous_play_option": "التشغيل المستمر",
+  "@settings_continuous_play_option": {
+    "description": "تسمية مفتاح التبديل للتشغيل المستمر",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings_continuous_play_subtitle": "تشغيل الحلقة التالية في البودكاست تلقائياً إذا كانت قائمة الانتظار فارغة",
+  "@settings_continuous_play_subtitle": {
+    "description": "عنوان فرعي لمفتاح التبديل للتشغيل المستمر",
+    "type": "text",
+    "placeholders": {}
+  },
+  "share_podcast_option_label": "مشاركة البودكاست",
+  "@share_podcast_option_label": {
+    "description": "خيار القائمة السياقية لمشاركة البودكاست الحالي",
+    "type": "text",
+    "placeholders": {}
+  },
+  "share_episode_option_label": "مشاركة الحلقة",
+  "@share_episode_option_label": {
+    "description": "خيار القائمة السياقية لمشاركة حلقة البودكاست الحالية",
+    "type": "text",
+    "placeholders": {}
+  },
+  "semantic_announce_loading": "جارٍ التحميل، يرجى الانتظار.",
+  "@semantic_announce_loading": {
+    "description": "يُنطق عند البحث قيد التقدم.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "episode_time_minute_remaining": "{minutes} د متبقية",
+  "@episode_time_minute_remaining": {
+    "description": "يعرض عدد الدقائق المتبقية من وقت الحلقة",
+    "type": "text",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "episode_time_second_remaining": "{seconds} ث متبقية",
+  "@episode_time_second_remaining": {
+    "description": "يعرض عدد الثواني المتبقية من وقت الحلقة",
+    "type": "text",
+    "placeholders": {
+      "seconds": {}
+    }
+  },
+  "episode_semantic_time_minute_remaining": "{minutes} دقيقة متبقية",
+  "@episode_semantic_time_minute_remaining": {
+    "description": "نسخة أطول من الدقائق المتبقية لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "episode_semantic_time_second_remaining": "{seconds} ثانية متبقية",
+  "@episode_semantic_time_second_remaining": {
+    "description": "نسخة أطول من الثواني المتبقية لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "seconds": {}
+    }
+  },
+  "episode_time_weeks_ago": "{weeks,plural, =1{منذ أسبوع}other{منذ {weeks} أسبوع}}",
+  "@episode_time_weeks_ago": {
+    "description": "يعرض عدد الأسابيع التي مرت منذ إصدار الحلقة",
+    "type": "text",
+    "placeholders": {
+      "weeks": {}
+    }
+  },
+  "episode_semantic_time_weeks_ago": "{weeks,plural, =1{منذ أسبوع واحد}other{منذ {weeks} أسبوع}}",
+  "@episode_semantic_time_weeks_ago": {
+    "description": "يعرض عدد الأسابيع التي مرت منذ إصدار الحلقة، نسخة أطول لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "weeks": {}
+    }
+  },
+  "episode_time_days_ago": "{days,plural, =1{منذ يوم}other{منذ {days} يوم}}",
+  "@episode_time_days_ago": {
+    "description": "يعرض عدد الأيام التي مرت منذ إصدار الحلقة",
+    "type": "text",
+    "placeholders": {
+      "days": {}
+    }
+  },
+  "episode_semantic_time_days_ago": "{days,plural, =1{منذ يوم واحد}other{منذ {days} يوم}}",
+  "@episode_semantic_time_days_ago": {
+    "description": "يعرض عدد الأيام التي مرت منذ إصدار الحلقة، نسخة أطول لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "days": {}
+    }
+  },
+  "episode_time_hours_ago": "{hours,plural, =1{منذ ساعة}other{منذ {hours} ساعة}}",
+  "@episode_time_hours_ago": {
+    "description": "يعرض عدد الساعات التي مرت منذ إصدار الحلقة",
+    "type": "text",
+    "placeholders": {
+      "hours": {}
+    }
+  },
+  "episode_semantic_time_hours_ago": "{hours,plural, =1{منذ {hours} ساعة}other{منذ {hours} ساعة}}",
+  "@episode_semantic_time_hours_ago": {
+    "description": "يعرض عدد الساعات التي مرت منذ إصدار الحلقة، نسخة أطول لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "hours": {}
+    }
+  },
+  "episode_time_minutes_ago": "{minutes,plural, =1{منذ دقيقة}other{منذ {minutes} د}}",
+  "@episode_time_minutes_ago": {
+    "description": "يعرض عدد الدقائق التي مرت منذ إصدار الحلقة",
+    "type": "text",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "episode_semantic_time_minutes_ago": "{minutes,plural, =1{منذ دقيقة واحدة}other{منذ {minutes} دقيقة}}",
+  "@episode_semantic_time_minutes_ago": {
+    "description": "يعرض عدد الدقائق التي مرت منذ إصدار الحلقة، نسخة أطول لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "episode_time_now": "الآن",
+  "@episode_time_now": {
+    "description": "تم إصدار الحلقة للتو",
+    "type": "text",
+    "placeholders": {}
+  },
+  "time_seconds": "{seconds} ث",
+  "@time_seconds": {
+    "description": "مدة الحلقة بالثواني",
+    "type": "text",
+    "placeholders": {
+      "seconds": {}
+    }
+  },
+  "time_semantic_seconds": "{seconds} ثانية",
+  "@time_semantic_seconds": {
+    "description": "مدة الحلقة بالثواني - نسخة طويلة لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "seconds": {}
+    }
+  },
+  "time_minutes": "{minutes} د",
+  "@time_minutes": {
+    "description": "مدة الحلقة بالدقائق",
+    "type": "text",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "time_semantic_minutes": "{minutes} دقيقة",
+  "@time_semantic_minutes": {
+    "description": "مدة الحلقة بالدقائق - نسخة طويلة لقارئات الشاشة",
+    "type": "text",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "label_megabytes": "ميجابايت",
+  "@label_megabytes": {
+    "description": "تسمية الميجابايت",
+    "type": "text",
+    "placeholders": {}
+  },
+  "label_megabytes_abbr": "م.ب",
+  "@label_megabytes_abbr": {
+    "description": "اختصار تسمية الميجابايت",
+    "type": "text",
+    "placeholders": {}
+  },
+  "label_episode_actions": "إجراءات الحلقة",
+  "@label_episode_actions": {
+    "description": "عنوان إجراءات الحلقة",
+    "type": "text",
+    "placeholders": {}
+  },
+  "@@locale": "ar"
+}

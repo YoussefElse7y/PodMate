@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:podcast_player/bloc/settings/settings_bloc.dart';
 import 'package:podcast_player/entities/app_settings.dart';
 import 'package:podcast_player/l10n/L.dart';
@@ -17,6 +19,7 @@ class _EpisodeRefreshWidgetState extends State<EpisodeRefreshWidget> {
   @override
   Widget build(BuildContext context) {
     var settingsBloc = Provider.of<SettingsBloc>(context);
+    
 
     return StreamBuilder<AppSettings>(
       stream: settingsBloc.settings,

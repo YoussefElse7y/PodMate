@@ -46,6 +46,8 @@ class _NowPlayingOptionsSelectorState extends State<NowPlayingOptionsSelector> {
         NowPlayingOptionsSelector.baseSize /
         (windowHeight - NowPlayingOptionsSelector.baseSize);
 
+    final l10n = L.of(context)!;
+
     return DraggableScrollableSheet(
       initialChildSize: minSize,
       minChildSize: minSize,
@@ -89,11 +91,9 @@ class _NowPlayingOptionsSelectorState extends State<NowPlayingOptionsSelector> {
                       children: <Widget>[
                         SliderHandle(
                           label: optionsSliderOpen()
-                              ? L
-                                    .of(context)!
+                              ? l10n
                                     .semantic_playing_options_collapse_label
-                              : L
-                                    .of(context)!
+                              : l10n
                                     .semantic_playing_options_expand_label,
                           onTap: () {
                             if (draggableController != null) {

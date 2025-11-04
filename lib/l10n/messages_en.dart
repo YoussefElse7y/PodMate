@@ -58,11 +58,11 @@ class MessageLookup extends MessageLookupByLibrary {
   @override
   final Map<String, dynamic> messages = _notInlinedMessages(_notInlinedMessages);
 
-  static Map<String, dynamic> _notInlinedMessages(_) => {
+  static Map<String, dynamic> _notInlinedMessages(Object? _) => {
       'about_label': MessageLookupByLibrary.simpleMessage('About'),
     'add_rss_feed_option': MessageLookupByLibrary.simpleMessage('Add RSS Feed'),
-    'app_title': MessageLookupByLibrary.simpleMessage('Anytime Podcast Player'),
-    'app_title_short': MessageLookupByLibrary.simpleMessage('Anytime Player'),
+    'app_title': MessageLookupByLibrary.simpleMessage('PodMate Podcast Player'),
+    'app_title_short': MessageLookupByLibrary.simpleMessage('PodMate'),
     'audio_effect_trim_silence_label': MessageLookupByLibrary.simpleMessage('Trim Silence'),
     'audio_effect_volume_boost_label': MessageLookupByLibrary.simpleMessage('Volume Boost'),
     'audio_settings_playback_speed_label': MessageLookupByLibrary.simpleMessage('Playback Speed'),
