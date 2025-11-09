@@ -97,7 +97,6 @@ class _NowPlayingState extends State<NowPlaying> with WidgetsBindingObserver {
           if (!snapshot.hasData) {
             return Container();
           }
-
           var duration = snapshot.data == null ? 0 : snapshot.data!.duration;
           final WidgetBuilder? transportBuilder = playerBuilder?.builder(
             duration,

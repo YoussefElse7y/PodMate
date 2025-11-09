@@ -9,7 +9,7 @@ ThemeData _buildLightTheme() {
 
   return base.copyWith(
     colorScheme: ColorScheme.light(
-      primary: const Color(0xFF2196F3), // Blue primary
+      primary: const Color(0xFF2861F3), // Blue primary
       secondary: const Color(0xFF1976D2),
       tertiary: const Color(0xFF4CAF50), // Green accent
       surface: const Color(0xFFFFFFFF),
@@ -28,11 +28,11 @@ ThemeData _buildLightTheme() {
     cardColor: const Color(0xFFFFFFFF),
     dividerColor: const Color(0xFFE0E0E0),
     canvasColor: const Color(0xFFFFFFFF),
-    
+
     // AppBar Theme - Clean white with subtle shadow
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
-      foregroundColor: Color(0xFF212121),
+      foregroundColor: Color.fromARGB(255, 193, 193, 193),
       elevation: 0,
       centerTitle: false,
       titleTextStyle: TextStyle(
@@ -49,24 +49,22 @@ ThemeData _buildLightTheme() {
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
     ),
-    
+
     // Card Theme - Clean with subtle shadow
     cardTheme: CardThemeData(
       color: Colors.white,
       elevation: 1,
       shadowColor: Colors.black.withOpacity(0.05),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     ),
-    
+
     // Bottom App Bar
     bottomAppBarTheme: const BottomAppBarThemeData(
       color: Colors.white,
       elevation: 8,
     ),
-    
+
     // Text Theme - Modern typography
     textTheme: const TextTheme(
       displayLarge: TextStyle(
@@ -163,17 +161,11 @@ ThemeData _buildLightTheme() {
         letterSpacing: 0.5,
       ),
     ),
-    
+
     // Icon Theme
-    iconTheme: const IconThemeData(
-      color: Color(0xFF757575),
-      size: 24,
-    ),
-    primaryIconTheme: const IconThemeData(
-      color: Color(0xFF2196F3),
-      size: 24,
-    ),
-    
+    iconTheme: const IconThemeData(color: Color(0xFF757575), size: 24),
+    primaryIconTheme: const IconThemeData(color: Color(0xFF2861F3), size: 24),
+
     // Button Themes
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -181,9 +173,7 @@ ThemeData _buildLightTheme() {
         foregroundColor: Colors.white,
         elevation: 2,
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         textStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w600,
@@ -191,14 +181,12 @@ ThemeData _buildLightTheme() {
         ),
       ),
     ),
-    
+
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: const Color(0xFF2196F3),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         textStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w500,
@@ -206,15 +194,13 @@ ThemeData _buildLightTheme() {
         ),
       ),
     ),
-    
+
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: const Color(0xFF2196F3),
         side: const BorderSide(color: Color(0xFFE0E0E0), width: 1),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         textStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w500,
@@ -222,7 +208,7 @@ ThemeData _buildLightTheme() {
         ),
       ),
     ),
-    
+
     // Floating Action Button
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF2196F3),
@@ -230,7 +216,7 @@ ThemeData _buildLightTheme() {
       elevation: 4,
       shape: CircleBorder(),
     ),
-    
+
     // Tab Bar Theme
     tabBarTheme: const TabBarThemeData(
       labelColor: Colors.white,
@@ -247,7 +233,7 @@ ThemeData _buildLightTheme() {
         letterSpacing: 0.1,
       ),
     ),
-    
+
     // Chip Theme
     chipTheme: ChipThemeData(
       backgroundColor: const Color(0xFFF5F5F5),
@@ -257,9 +243,7 @@ ThemeData _buildLightTheme() {
       secondarySelectedColor: const Color(0xFF1976D2),
       labelPadding: const EdgeInsets.symmetric(horizontal: 12),
       padding: const EdgeInsets.all(8),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(24),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       labelStyle: const TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w500,
@@ -272,18 +256,16 @@ ThemeData _buildLightTheme() {
       ),
       brightness: Brightness.light,
     ),
-    
+
     // List Tile Theme
     listTileTheme: const ListTileThemeData(
       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       dense: false,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.zero,
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       iconColor: Color(0xFF757575),
       textColor: Color(0xFF212121),
     ),
-    
+
     // Slider Theme
     sliderTheme: SliderThemeData(
       activeTrackColor: const Color(0xFF2196F3),
@@ -298,39 +280,35 @@ ThemeData _buildLightTheme() {
       ),
       overlayShape: const RoundSliderOverlayShape(overlayRadius: 20.0),
     ),
-    
+
     // Progress Indicator Theme
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       color: Color(0xFF2196F3),
       linearTrackColor: Color(0xFFE0E0E0),
       circularTrackColor: Color(0xFFE0E0E0),
     ),
-    
+
     // Divider Theme
     dividerTheme: const DividerThemeData(
       color: Color(0xFFE0E0E0),
       thickness: 1,
       space: 1,
     ),
-    
+
     // Snackbar Theme
     snackBarTheme: SnackBarThemeData(
       backgroundColor: const Color(0xFF323232),
       contentTextStyle: const TextStyle(color: Colors.white, fontSize: 14),
       actionTextColor: const Color(0xFF2196F3),
       behavior: SnackBarBehavior.floating,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     ),
-    
+
     // Dialog Theme
     dialogTheme: DialogThemeData(
       backgroundColor: Colors.white,
       elevation: 8,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       titleTextStyle: const TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w600,
@@ -345,10 +323,11 @@ ThemeData _buildLightTheme() {
         height: 1.5,
       ),
     ),
-    
+
     // Bottom Sheet Theme
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Colors.white,
+
       elevation: 8,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
@@ -362,11 +341,11 @@ ThemeData _buildDarkTheme() {
 
   return base.copyWith(
     colorScheme: ColorScheme.dark(
-      primary: const Color(0xFF2196F3), // Blue primary
+      primary: const Color(0xFF2861F3), // Blue primary
       secondary: const Color(0xFF64B5F6),
       tertiary: const Color(0xFF4CAF50),
-      surface: const Color(0xFF1E1E1E),
-      background: const Color(0xFF121212),
+      surface: const Color(0xFF1F2530),
+      background: const Color(0xFF151A22),
       error: const Color(0xFFEF5350),
       onPrimary: Colors.white,
       onSecondary: Colors.white,
@@ -377,11 +356,11 @@ ThemeData _buildDarkTheme() {
     ),
     useMaterial3: true,
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: const Color(0xFF121212),
+    scaffoldBackgroundColor: const Color(0xFF151A22),
     cardColor: const Color(0xFF1E1E1E),
     dividerColor: const Color(0xFF444444),
     canvasColor: const Color(0xFF121212),
-    
+
     // AppBar Theme - Dark with subtle elevation
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFF1E1E1E),
@@ -394,7 +373,7 @@ ThemeData _buildDarkTheme() {
         fontWeight: FontWeight.w600,
         letterSpacing: 0,
       ),
-      iconTheme: IconThemeData(color: Color(0xFFE0E0E0)),
+      iconTheme: IconThemeData(color: Color(0xFF2861F3)),
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.light,
@@ -402,24 +381,22 @@ ThemeData _buildDarkTheme() {
         systemNavigationBarIconBrightness: Brightness.light,
       ),
     ),
-    
+
     // Card Theme
     cardTheme: CardThemeData(
       color: const Color(0xFF1E1E1E),
       elevation: 2,
       shadowColor: Colors.black.withOpacity(0.3),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     ),
-    
+
     // Bottom App Bar
     bottomAppBarTheme: const BottomAppBarThemeData(
       color: Color(0xFF1E1E1E),
       elevation: 8,
     ),
-    
+
     // Text Theme - Dark mode typography
     textTheme: const TextTheme(
       displayLarge: TextStyle(
@@ -516,27 +493,19 @@ ThemeData _buildDarkTheme() {
         letterSpacing: 0.5,
       ),
     ),
-    
+
     // Icon Theme
-    iconTheme: const IconThemeData(
-      color: Color(0xFF9E9E9E),
-      size: 24,
-    ),
-    primaryIconTheme: const IconThemeData(
-      color: Color(0xFF2196F3),
-      size: 24,
-    ),
-    
+    iconTheme: const IconThemeData(color: Color(0xFF9E9E9E), size: 24),
+    primaryIconTheme: const IconThemeData(color: Color(0xFF2861F3), size: 24),
+
     // Button Themes
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xFF2196F3),
+        backgroundColor: const Color(0xFF2861F3),
         foregroundColor: Colors.white,
         elevation: 2,
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         textStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w600,
@@ -544,14 +513,12 @@ ThemeData _buildDarkTheme() {
         ),
       ),
     ),
-    
+
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: const Color(0xFF64B5F6),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         textStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w500,
@@ -559,15 +526,13 @@ ThemeData _buildDarkTheme() {
         ),
       ),
     ),
-    
+
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: const Color(0xFF64B5F6),
         side: const BorderSide(color: Color(0xFF444444), width: 1),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         textStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w500,
@@ -575,7 +540,7 @@ ThemeData _buildDarkTheme() {
         ),
       ),
     ),
-    
+
     // Floating Action Button
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF2196F3),
@@ -583,9 +548,10 @@ ThemeData _buildDarkTheme() {
       elevation: 4,
       shape: CircleBorder(),
     ),
-    
+
     // Tab Bar Theme
     tabBarTheme: const TabBarThemeData(
+      dividerColor: Colors.transparent,
       labelColor: Colors.white,
       unselectedLabelColor: Color(0xFF9E9E9E),
       indicatorSize: TabBarIndicatorSize.label,
@@ -600,7 +566,7 @@ ThemeData _buildDarkTheme() {
         letterSpacing: 0.1,
       ),
     ),
-    
+
     // Chip Theme
     chipTheme: ChipThemeData(
       backgroundColor: const Color(0xFF2C2C2C),
@@ -610,9 +576,7 @@ ThemeData _buildDarkTheme() {
       secondarySelectedColor: const Color(0xFF1976D2),
       labelPadding: const EdgeInsets.symmetric(horizontal: 12),
       padding: const EdgeInsets.all(8),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(24),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       labelStyle: const TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w500,
@@ -625,18 +589,16 @@ ThemeData _buildDarkTheme() {
       ),
       brightness: Brightness.dark,
     ),
-    
+
     // List Tile Theme
     listTileTheme: const ListTileThemeData(
       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       dense: false,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.zero,
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       iconColor: Color(0xFF9E9E9E),
       textColor: Color(0xFFE0E0E0),
     ),
-    
+
     // Slider Theme
     sliderTheme: SliderThemeData(
       activeTrackColor: const Color(0xFF2196F3),
@@ -651,39 +613,35 @@ ThemeData _buildDarkTheme() {
       ),
       overlayShape: const RoundSliderOverlayShape(overlayRadius: 20.0),
     ),
-    
+
     // Progress Indicator Theme
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       color: Color(0xFF2196F3),
       linearTrackColor: Color(0xFF444444),
       circularTrackColor: Color(0xFF444444),
     ),
-    
+
     // Divider Theme
     dividerTheme: const DividerThemeData(
       color: Color(0xFF444444),
       thickness: 1,
       space: 1,
     ),
-    
+
     // Snackbar Theme
     snackBarTheme: SnackBarThemeData(
       backgroundColor: const Color(0xFF2C2C2C),
       contentTextStyle: const TextStyle(color: Colors.white, fontSize: 14),
       actionTextColor: const Color(0xFF64B5F6),
       behavior: SnackBarBehavior.floating,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     ),
-    
+
     // Dialog Theme
     dialogTheme: DialogThemeData(
       backgroundColor: const Color(0xFF1E1E1E),
       elevation: 8,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       titleTextStyle: const TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w600,
@@ -698,7 +656,7 @@ ThemeData _buildDarkTheme() {
         height: 1.5,
       ),
     ),
-    
+
     // Bottom Sheet Theme
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Color(0xFF1E1E1E),

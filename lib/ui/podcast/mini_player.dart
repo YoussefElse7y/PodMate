@@ -261,6 +261,7 @@ class _MiniPlayerBuilderState extends State<_MiniPlayerBuilder>
                                   onPressed: () {
                                     if (playing) {
                                       _pause(audioBloc);
+                                      
                                     } else {
                                       _play(audioBloc);
                                     }

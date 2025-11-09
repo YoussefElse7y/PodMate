@@ -1,10 +1,15 @@
+import 'package:flutter/foundation.dart';
+import 'package:podcast_player/bloc/podcast/audio_bloc.dart';
 import 'package:podcast_player/bloc/podcast/podcast_bloc.dart';
 import 'package:podcast_player/bloc/podcast/episode_bloc.dart';
 import 'package:podcast_player/entities/podcast.dart';
 import 'package:podcast_player/entities/episode.dart';
 import 'package:podcast_player/l10n/L.dart';
 import 'package:podcast_player/state/bloc_state.dart';
+import 'package:podcast_player/ui/podcast/now_playing.dart';
+import 'package:podcast_player/ui/search/search.dart';
 import 'package:podcast_player/ui/widgets/platform_progress_indicator.dart';
+import 'package:podcast_player/ui/widgets/search_slide_route.dart';
 import 'package:podcast_player/ui/widgets/tile_image.dart';
 import 'package:podcast_player/ui/podcast/podcast_details.dart';
 import 'package:flutter/material.dart';
@@ -77,19 +82,34 @@ class _LibraryState extends State<Library> with SingleTickerProviderStateMixin {
 
   Widget _buildHeader(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+      padding: const EdgeInsets.fromLTRB(16, 24, 16, 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          SizedBox(width: 15),
           Text(
             'Your library',
             style: Theme.of(
               context,
             ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600),
+            textAlign: TextAlign.left,
           ),
           IconButton(
             icon: const Icon(Icons.search),
-            onPressed: () {
+            onPressed: () async {
+              await Navigator.push(
+                context,
+                defaultTargetPlatform == TargetPlatform.iOS
+                    ? MaterialPageRoute<void>(
+                        fullscreenDialog: false,
+                        settings: const RouteSettings(name: 'search'),
+                        builder: (context) => const Search(),
+                      )
+                    : SlideRightRoute(
+                        widget: const Search(),
+                        settings: const RouteSettings(name: 'search'),
+                      ),
+              );
               // Navigate to search
             },
           ),
@@ -110,7 +130,6 @@ class _LibraryState extends State<Library> with SingleTickerProviderStateMixin {
           borderRadius: BorderRadius.circular(24),
           color: Theme.of(context).primaryColor,
         ),
-        labelColor: Colors.white,
         unselectedLabelColor: Theme.of(context).textTheme.bodyMedium?.color,
         labelPadding: const EdgeInsets.symmetric(horizontal: 4),
         tabs: [
@@ -128,8 +147,10 @@ class _LibraryState extends State<Library> with SingleTickerProviderStateMixin {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(24),
-        color: isSelected ? null : Colors.transparent,
+        borderRadius: BorderRadius.circular(8),
+        color: !isSelected
+            ? Theme.of(context).colorScheme.surface
+            : Theme.of(context).colorScheme.primary,
       ),
       child: Text(text),
     );
@@ -268,15 +289,19 @@ class _RecentlyListenTabState extends State<_RecentlyListenTab> {
           return const Center(child: PlatformProgressIndicator());
         }
 
-        if (snapshot.data is BlocPopulatedState) {
-          final episodes =
-              (snapshot.data as BlocPopulatedState).results as List<Episode>?;
+        final state = snapshot.data;
+
+        if (state is BlocLoadingState) {
+          return const Center(child: PlatformProgressIndicator());
+        }
+
+        if (state is BlocPopulatedState) {
+          final episodes = state.results as List<Episode>?;
 
           if (episodes == null || episodes.isEmpty) {
             return _buildEmptyState(context);
           }
 
-          // Filter to only show episodes with progress
           final recentEpisodes = episodes.where((e) => e.position > 0).toList();
 
           if (recentEpisodes.isEmpty) {
@@ -292,7 +317,8 @@ class _RecentlyListenTabState extends State<_RecentlyListenTab> {
           );
         }
 
-        return _buildEmptyState(context);
+        // If state is empty or initial, show a spinner (not empty message)
+        return const Center(child: PlatformProgressIndicator());
       },
     );
   }
@@ -307,7 +333,7 @@ class _RecentlyListenTabState extends State<_RecentlyListenTab> {
             Icon(
               Icons.headset,
               size: 64,
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).colorScheme.primary,
             ),
             const SizedBox(height: 16),
             Text(
@@ -438,7 +464,7 @@ class _FollowedTab extends StatelessWidget {
             Icon(
               Icons.podcasts,
               size: 64,
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).colorScheme.primary,
             ),
             const SizedBox(height: 16),
             Text(
@@ -483,11 +509,24 @@ class _HighlightChannelCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                top: Radius.circular(12),
-              ),
-              child: TileImage(url: podcast.imageUrl!, size: 180),
+            Stack(
+              children: [
+                ClipRRect(
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(12),
+                  ),
+                  child: TileImage(url: podcast.imageUrl!, size: 180),
+                ),
+                Positioned(
+                  bottom: 8,
+                  right: 8,
+                  child: Icon(
+                    Icons.play_circle_fill,
+                    color: Theme.of(context).colorScheme.primary,
+                    size: 40,
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -495,9 +534,10 @@ class _HighlightChannelCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '5 May • 1 hr 30 min',
+                    'last updated ${DateFormat('d MMM').format(podcast.lastUpdated)}',
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
+
                   const SizedBox(height: 2),
                   Text(
                     podcast.title,
@@ -522,47 +562,63 @@ class _EpisodeListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-      leading: Stack(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: TileImage(
-              url: episode.imageUrl ?? episode.thumbImageUrl ?? '',
-              size: 56,
-            ),
-          ),
-          if (episode.position > 0)
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                height: 3,
-                color: Theme.of(context).primaryColor.withOpacity(0.8),
-                width: 56 * (episode.percentagePlayed / 100),
+    // Grab the bloc once – no rebuild on every tap
+    final audioBloc = Provider.of<AudioBloc>(context, listen: false);
+
+    return GestureDetector(
+      onTap: () async {
+        // 1. Start playing the episode using the existing play function
+        audioBloc.play(episode);
+
+        // 2. Open the full-screen player
+        if (context.mounted) {
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (_) => const NowPlaying()));
+        }
+      },
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        leading: Stack(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: TileImage(
+                url: episode.imageUrl ?? episode.thumbImageUrl ?? '',
+                size: 56,
               ),
             ),
-        ],
-      ),
-      title: Text(
-        episode.title ?? '',
-        maxLines: 2,
-        overflow: TextOverflow.ellipsis,
-      ),
-      subtitle: Text(
-        '${_formatDate(episode.publicationDate)} • ${_formatDuration(episode.duration)}',
-        style: Theme.of(context).textTheme.bodySmall,
-      ),
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          IconButton(
-            icon: const Icon(Icons.favorite_border, size: 20),
-            onPressed: () {},
-          ),
-        ],
+            if (episode.position > 0)
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  height: 3,
+                  color: Theme.of(context).primaryColor.withOpacity(0.8),
+                  width: 56 * (episode.percentagePlayed / 100),
+                ),
+              ),
+          ],
+        ),
+        title: Text(
+          episode.title ?? '',
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
+        subtitle: Text(
+          '${_formatDate(episode.publicationDate)} • ${_formatDuration(episode.duration)}',
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.favorite_border, size: 20),
+              onPressed: () {},
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -591,36 +647,88 @@ class _RecentEpisodeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 12),
-      child: ListTile(
-        leading: Stack(
+    // Grab the bloc once – no rebuild on every tap
+    final audioBloc = Provider.of<AudioBloc>(context, listen: false);
+
+    return GestureDetector(
+      onTap: () async {
+        // 1. Start playing the episode using the existing play function
+        audioBloc.play(episode);
+
+        // 2. Open the full-screen player
+        if (context.mounted) {
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (_) => const NowPlaying()));
+        }
+      },
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        width: double.infinity,
+        color: Colors.transparent,
+        child: Row(
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: TileImage(
                 url: episode.imageUrl ?? episode.thumbImageUrl ?? '',
-                size: 60,
+                size: 130,
               ),
             ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                height: 4,
-                child: LinearProgressIndicator(
-                  value: episode.percentagePlayed / 100,
-                ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    episode.title ?? '',
+                    style: Theme.of(context).textTheme.titleLarge,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  const SizedBox(height: 10),
+                  LinearProgressIndicator(
+                    minHeight: 5,
+                    value: episode.percentagePlayed / 100,
+                    backgroundColor: Theme.of(context).colorScheme.surface,
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                      Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    '${episode.percentagePlayed.toInt()}% complete',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    '${_formatDate(episode.publicationDate)}   •   ${_formatDuration(episode.duration)}',
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
               ),
             ),
           ],
         ),
-        title: Text(episode.title ?? '', maxLines: 2),
-        subtitle: Text('${episode.percentagePlayed.toInt()}% complete'),
-        trailing: const Icon(Icons.play_circle_outline, size: 32),
       ),
     );
+  }
+
+  String _formatDate(DateTime? date) {
+    if (date == null) return '';
+    return DateFormat('d MMM').format(date);
+  }
+
+  String _formatDuration(int seconds) {
+    if (seconds == 0) return '';
+    final duration = Duration(seconds: seconds);
+    final hours = duration.inHours;
+    final minutes = duration.inMinutes.remainder(60);
+    if (hours > 0) {
+      return '$hours hr ${minutes > 0 ? "$minutes min" : ""}';
+    }
+    return '$minutes min';
   }
 }
 
@@ -668,32 +776,102 @@ class _FollowedPodcastCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final podcastBloc = Provider.of<PodcastBloc>(context);
 
-    return Card(
-      margin: const EdgeInsets.only(bottom: 12),
-      child: ListTile(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => PodcastDetails(podcast, podcastBloc),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PodcastDetails(podcast, podcastBloc),
+          ),
+        );
+      },
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 12),
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        padding: const EdgeInsets.all(12),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+
+          children: [
+            // Podcast image
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: TileImage(url: podcast.imageUrl ?? '', size: 90),
             ),
-          );
-        },
-        leading: ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: TileImage(url: podcast.imageUrl!, size: 56),
-        ),
-        title: Text(podcast.title, maxLines: 1),
-        subtitle: Text(
-          podcast.copyright ?? 'Podcast',
-          style: Theme.of(context).textTheme.bodySmall,
-          maxLines: 1,
-        ),
-        trailing: IconButton(
-          icon: const Icon(Icons.person_add_outlined),
-          onPressed: () {},
+            const SizedBox(width: 12),
+            // Podcast info
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+
+                children: [
+                  // Title and Follow button
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          podcast.title,
+                          style: Theme.of(context).textTheme.titleMedium
+                              ?.copyWith(fontWeight: FontWeight.w600),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      IconButton(
+                        icon: const Icon(Icons.person_add_outlined, size: 20),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                  // Stats row
+                  Row(
+                    children: [
+                      _buildStat(Icons.people_outline, "12.3k", context),
+                      const SizedBox(width: 12),
+                      _buildStat(Icons.play_arrow_outlined, "30.3k", context),
+                      const SizedBox(width: 12),
+                      _buildStat(Icons.favorite_border, "1.2k", context),
+                    ],
+                  ),
+
+                  // Description
+                  const SizedBox(height: 6),
+                  Text(
+                    podcast.description ??
+                        'Discover holistic approaches to wellness, nurturing your mind, body, and soul...',
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyMedium?.copyWith(color: Colors.grey[400]),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
+    );
+  }
+
+  Widget _buildStat(IconData icon, String value, BuildContext context) {
+    return Row(
+      children: [
+        Icon(icon, size: 14, color: Colors.grey[400]),
+        const SizedBox(width: 4),
+        Text(
+          value,
+          style: Theme.of(
+            context,
+          ).textTheme.bodySmall?.copyWith(color: Colors.grey[400]),
+        ),
+      ],
     );
   }
 }
